@@ -1,5 +1,18 @@
-td {
-	height: 100px;
-	width: 100px;
+.play td {
+	height: 60px;
+	width: 60px;
 	background-color: black;
 }
+
+button {
+	width: 60px;
+	height: 30px;
+}
+
+table {
+	margin : 30px auto;
+}
+
+
+/* test sélection data-attribute*/
+td[data-row='5']
