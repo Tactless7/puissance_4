@@ -14,5 +14,7 @@ table {
 }
 
 
-/* test sélection data-attribute*/
-td[data-row='5']
+/* test sélection data-attribute
+td[data-row='5'] + td[data-column='2']{
+	background-color: yellow;
+}*/
