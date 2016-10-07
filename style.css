@@ -1,7 +1,20 @@
+h1 {
+	width: 500px;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 4em;
+}
+
+p {
+	margin-bottom: 0;
+	text-align: center;
+}
+
 .play td {
 	height: 60px;
 	width: 60px;
 	background-color: black;
+	border-radius: 50%;
 }
 
 button {
@@ -11,10 +24,11 @@ button {
 
 table {
 	margin : 30px auto;
+	background-color: blue;
 }
 
-
-/* test sélection data-attribute
-td[data-row='5'] + td[data-column='2']{
-	background-color: yellow;
-}*/
+.player1 {
+	font-size: 22px;
+	color: red;
+	font-weight: bold;
+}
