@@ -13,10 +13,10 @@ var red = 'rgb(255, 0, 0)';
 function verifyColor(row, column){
 	currentColor = $('td[data-row='+row+'][data-column='+column+']').css('background-color');
 	if (currentColor === black) {
-		return blackOrElse = true;
+		blackOrElse = true;
 	}
 	else {
-		return blackOrElse = false;
+		blackOrElse = false;
 	}
 }
 
@@ -27,23 +27,23 @@ function goUp(row){
 	}
 }
 
-	// Fonction qui teste la couleur en cour et 
+	// Fonction qui teste la couleur en cour et colore selon le joueur si noire
 function caseColor(column){
 	for (var i = 1 ; i <= 6; i++) {
 		verifyColor(currentRow, currentColumn);	
-		if(blackOrElse === true && currentPlayer === 1){
+		if(blackOrElse && currentPlayer === 1){
 			console.log(currentRow + ', ' + currentColumn);
 			$('td[data-row='+currentRow+'][data-column='+column+']').css('background-color', red);
 			currentPlayer = 2;
 			break;
 		}
-		else if(blackOrElse === true && currentPlayer === 2){
+		else if(blackOrElse && currentPlayer === 2){
 			console.log(currentRow + ', ' + currentColumn);
 			$('td[data-row='+currentRow+'][data-column='+column+']').css('background-color', yellow);
 			currentPlayer = 1;
 			break;
 		}
-		if(blackOrElse === false){
+		if(!blackOrElse){
 			goUp(currentRow);
 			console.log('UP ' + currentRow + ', ' + currentColumn);
 		}
